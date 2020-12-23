@@ -1,0 +1,215 @@
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--Import materialize.css-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/da5e55aecd.js" crossorigin="anonymous"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <style>
+    body {
+        font-size: 1.6rem;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #cdc9c3;
+    background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+    header {
+        padding: 15px;
+        background-color: teal;
+        color: white;
+    }
+    header a {
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.9rem;
+    }
+    .intro {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .intro p {
+        color: #393e46;
+        font-style: italic;
+        font-size: 14px;
+    }
+    .questions-section {
+        border: none;
+        width: 700px ;
+        height: 500px;
+        max-height: auto;
+        display: none;
+        justify-content: start;
+        text-align: left;
+        margin: 20px auto;
+        box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background: white;
+    
+    }
+    nav {
+        padding:0 10%;
+    }
+    .option {
+        display: flex;
+    
+    align-items:center;
+    background-color:#f6f6f6;
+        width: 600px;
+        padding: 8px;
+        border-radius: 10px;
+        margin:  8px 0;
+    }
+     
+    .option p {
+        font-size: 1.2rem;
+        color: #373a40;
+        font-weight: 700;
+    }
+    
+    .questions-section h4 {
+        
+        color: #373a40;
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .questions-section button {
+        padding: 15px 12px;
+        border-radius: 0;
+        background: #373a40;
+        color: #f6f6f6;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border: 0;
+    }
+    @media (max-width:900px){
+       body {
+        font-size: 1.8rem;
+       }
+    header  a {
+        font-size:1.5rem;
+    }
+    .questions-section {
+        width: 400px;
+    }
+    .option {
+       
+        width: 350px;
+       
+    }
+    }
+    .result {
+        display:flex;
+        justify-content: center;
+    }
+    @media (max-width:600px){
+        .questions-section {
+            width: 300px;
+            height: 600px;
+        }
+        .option {
+       
+        width: 250px;
+       
+    }
+    }
+    .cancel-btn {
+        height: 60px !important;
+        border-radius: 0 !important;
+    }
+    
+    .intro button {
+        width: 100px;
+        margin: 0 auto;
+    }
+    .intro h2 {
+        font-weight: 700;
+        font-family: 'Andika New Basic', sans-serif;
+    }
+    button {
+        height: 50px !important;
+    }
+    .result-btn {
+display: flex;
+justify-content: center;
+align-items: center;
+    }
+    .answer {
+        justify-self: end;
+    }
+#nav-mobile {
+    display: flex;
+}
+    
+        </style>
+       <nav class="teal">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+           
+            <li><a onclick="displayCard()">Start quiz</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+        <div class="intro">
+           
+            <h2>Start your quiz test your knowledge</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos a dolore voluptas porro. Reprehenderit praesentium facere dolorem dolore.</p>
+            <button class="btn btn-primary" onclick=" displayCard()">start</button>
+        </div>
+        <div class="questions-section">
+           
+    <h4 id="question">this is the first quistion ?</h4>
+     <div id="op_section">
+         <div class="option option-a" >
+             <label for="a">
+                <input type="checkbox"  class="checkbox" name=""  id="a">
+                <span class="option-a"></span>
+
+             </label>
+             <p id="option_a" data-answer=""> </p> <span class="answer"></span> </div>
+         <div class="option option-b" ><label for="b">
+            <input type="checkbox"  class="checkbox"  name="" id="b">
+            
+            <span class="option-b"></span>
+
+         </label>
+         <p id="option_b" data-answer=""> </p> <span class="answer"></span> </div>
+         <div class="option option-c" >
+             <label for="c">
+                <input type="checkbox" class="checkbox"  name="" id="c">
+                <span class="option-c"></span>
+
+             </label>
+             <p id="option_c" data-answer="">  </p> <span class="answer"></span> </div>
+    </div> 
+    
+    <div class="btn-section">
+    <button id="next-btn" class="btn btn-primary" onclick="handleSubmit()">submit</button>
+    <button id="sub-btn" class="btn btn-primary" onclick="handleNext()">next</button>
+    <button id="res-btn" class="btn btn-success result-btn" style="display: none;" onclick="displayRes()">result</button>
+    <a  onclick="removeQuiz()" class="btn btn-primary cancel-btn">cancel</a>
+    </div>
+        </div>
+    
+<script>
+
+</script>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+  </html>

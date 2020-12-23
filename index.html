@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+        <!--Import materialize.css-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/da5e55aecd.js" crossorigin="anonymous"></script>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </head>
+<body>
+    <style>
+body {
+        font-size: 1.6rem;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #cdc9c3;
+    background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+    header {
+        padding: 15px;
+        background-color: teal;
+        color: white;
+    }
+    header a {
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.9rem;
+    }
+    .intro {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        width: 400px;
+        margin: 80px auto;
+        text-align: center;
+    }
+    .intro p {
+        color: #393e46;
+        font-style: italic;
+        font-size: 14px;
+    }
+    .questions-section {
+        border: none;
+        width: 700px ;
+        height: 300px;
+       
+        display: none;
+        justify-content: start;
+        text-align: left;
+        margin: 20px auto;
+        box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background: white;
+        max-height: 500px;
+    }
+    nav {
+        padding:0 10%;
+    }
+    .option {
+        display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color:#f6f6f6;
+        width: 600px;
+        padding: 8px;
+        border-radius: 10px;
+        margin:  8px 0;
+    }
+     
+    .option p {
+        font-size: 1.2rem;
+        color: #373a40;
+        font-weight: 700;
+    }
+    
+    .questions-section h4 {
+        
+        color: #373a40;
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .questions-section button {
+        padding: 15px 12px;
+        border-radius: 0;
+        background: #373a40;
+        color: #f6f6f6;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border: 0;
+    }
+@media (max-width:900px){
+   body {
+    font-size: 1.8rem;
+   }
+header  a {
+    font-size:1.5rem;
+}
+}
+.result {
+    display:"flex";
+    justify-content: center;
+}
+@media (max-width:600px){
+        .questions-section {
+            width: 300px;
+            height: 600px;
+        }
+        .option {
+       
+        width: 250px;
+       
+    }
+    }
+    .cancel-btn {
+        height: 60px !important;
+        border-radius: 0 !important;
+    }
+   .start-btn {
+       width: 100px;
+       height: 50px;
+       background: teal;
+       color: #ffffff;
+       margin: 20px auto;
+       font-size: 15px;
+   }
+    .start-btn:hover {
+     
+        animation-timing-function: ease-in; 
+        width: 100px;
+  height: 100px;
+  background-color: teal;
+  animation-name: example;
+  animation-duration: 0.6s;
+    }
+    @keyframes example {
+  0%   {background:linear-gradient(60deg,#000000 15% , teal 85%)}
+  15%   {background:linear-gradient(60deg,#000000 20% , teal 80%)}
+  25%  {background:linear-gradient(60deg,#000000 30% , teal 70%)}
+  50%  {background:linear-gradient(60deg,#000000 60% , teal 40%)}
+  70%  {background:linear-gradient(60deg,#000000 80% , teal 20%)}
+  100% {background:linear-gradient(60deg,#000000 100% , teal 0%)}
+}
+    /* .intro button:hover  {
+        background: linear-gradient(60deg, #000000 0% , teal 100%);
+        animation-name: identifier;
+        animation-delay: 1s;
+        animation-timing-function: ease-in;
+    }
+     */
+    .header-intro {
+        font-weight: 700;
+        font-family: 'Andika New Basic', sans-serif;
+        color: #000000;
+    }
+    button {
+        height: 50px !important;
+    }
+    button:active {
+        outline:none;
+        border: none;
+    }
+    .result-btn {
+display: flex;
+justify-content: center;
+align-items: center;
+    }
+    .answer {
+        justify-self: end;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10% ;
+        background: teal ;
+        color: white;
+        height: 60px;
+    }
+ .link {
+      font-size: 15px;
+      height: inherit;
+      width: 100px;
+     margin: 0 15px;
+  }
+  
+nav ul {
+    display: flex;
+}
+.btn:hover {
+background: teal;
+}
+.result-head {
+    font-weight: 700;
+        font-family: 'Andika New Basic', sans-serif;
+        text-align: center;
+        margin: 0 auto;
+}
+.para-result  {
+    font-weight: 700;
+        font-family: 'Andika New Basic', sans-serif;
+}
+.cancel-btn {
+    height: 50px !important;
+    margin: 15px 0;
+}
+.cancel-btn:hover {
+    background: #ff0033;
+}
+    </style>
+   <nav>
+   
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile"  >
+        <li><a class="link" href="#" onclick="displayCard()">Start Quiz</a></li>
+        <li><a  class="link"href="#">New Quizes</a></li>
+      </ul>
+   
+  </nav>
+
+    <div class="intro">
+        <h1 class="header-intro">Start your quiz test your knowledge</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora non voluptate saepe minima laudantium, possimus molestiae. </p>
+        <button class="start-btn" onclick=" displayCard()">start</button>
+    </div>
+    <div class="questions-section">
+<h4 id="question">this is the first quistion ?</h4>
+ <div id="op_section">
+     <div class="option option-a" ><input type="checkbox" name="" class="checkbox" id="a"><p id="option_a" data-answer=""> </p> <span class="answer-erea"></span> </div>
+     <div class="option option-b" ><input type="checkbox" class="checkbox" name="" id="b"><p id="option_b" data-answer=""> </p> <span class="answer-erea"></span> </div>
+     <div class="option option-c" ><input type="checkbox" name="" class="checkbox"id="c"><p id="option_c" data-answer="">  </p> <span class="answer-erea"></span> </div>
+</div> 
+
+<div class="btn-section">
+<button id="next-btn" class="btn " onclick="handleSubmit()">submit</button>
+<button id="sub-btn" class="btn " onclick="handleNext()">next</button>
+<button  onclick="removeQuiz()" class="btn  cancel-btn">cancel</button>
+<button id="res-btn" class="btn " style="display: none;" onclick="displayRes()">result</button>
+</div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
